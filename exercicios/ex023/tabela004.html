@@ -20,7 +20,12 @@
             padding: 10px;
         }
 
-        td {
+        thead {
+            border: 1px solid black;
+            background-color: lightgray;
+        }
+
+        td, th{
             border: 1px solid black;
             padding: 5px;
         }
@@ -35,18 +40,22 @@
 <body>
     <table>
         <caption>
-            Filmes Favoritos
+            <strong>Filmes Favoritos</strong>
         </caption>
         <thead>
         <tr>
-            <td class="especial">Grupo</td>
-            <td class="especial">Nomes</td>
-            <td class="especial" colspan="3">Filmes</td>
+            <th class="especial" scope="col">Grupo</th>
+            <th class="especial" scope="col">Nomes</th>
+            <th class="especial" colspan="3" scope="colgroup">Filmes</th>
         </tr>
     </thead>
+    <tfoot>
+        <th colspan="4" scope="row">Total</th>
+        <th>1000</th>
+    </tfoot>
     <tbody>
         <tr>
-            <td class="especial" rowspan="3">Mulheres</td>
+            <th class="especial" rowspan="3" scope="rowgroup">Mulheres</th>
             <td>Ana Maria Santos</td>
             <td>Alien</td>
             <td>Rambo</td>
@@ -65,7 +74,7 @@
             <td>Big Hero</td>
         </tr>
         <tr>
-            <td class="especial" rowspan="3">Homens</td>
+            <th class="especial" rowspan="3" scope="rowgroup">Homens</th>
             <td>Bruno Mendonça</td>
             <td>Intocáveis</td>
             <td>Amnésia</td>
